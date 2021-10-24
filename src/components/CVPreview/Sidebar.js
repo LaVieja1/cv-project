@@ -7,9 +7,9 @@ const Sidebar = ({ personalInfo }) => {
     return (
         <SidebarWrapper>
             <Photo src={personalInfo.photo} />
-            <Section title="Personal Details" contrastTitle direction="column">
-                <Subsection title="Address">{personalInfo.address}</Subsection>
-                <Subsection title="Phone Number">{personalInfo.phoneNumber}</Subsection>
+            <Section title="Detalles personales" contrastTitle direction="column">
+                <Subsection title="Dirección">{personalInfo.address}</Subsection>
+                <Subsection title="Numero de teléfono">{personalInfo.phoneNumber}</Subsection>
                 <Subsection title="Email">{personalInfo.email}</Subsection>
             </Section>
         </SidebarWrapper>

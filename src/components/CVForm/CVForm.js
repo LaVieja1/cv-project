@@ -36,7 +36,7 @@ const CVForm = ({
             <>
                 <Button text="Generar PDF" onClick={onPrint} primary></Button>
                 <Button text="Cargar Ejemplo" onClick={onLoadExample} secondary></Button>
-                <button text="Reiniciar" onClick={onReset} red></button>
+                <Button text="Reiniciar" onClick={onReset} red></Button>
             </>
         </CVFormWrapper>
     );

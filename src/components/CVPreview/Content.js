@@ -15,13 +15,13 @@ const Content = ({ personalInfo, experience, education }) => {
 
   return (
     <ContentWrapper>
-      <Section title="Description" contrastTitle>
+      <Section title="Descripción" contrastTitle>
         <Description>{personalInfo.description}</Description>
       </Section>
-      <Section title="Experience" direction="column" contrastTitle>
+      <Section title="Experiencia" direction="column" contrastTitle>
         {experienceItems}
       </Section>
-      <Section title="Education" direction="column" contrastTitle>
+      <Section title="Educación" direction="column" contrastTitle>
         {educationItems}
       </Section>
     </ContentWrapper>

@@ -12,7 +12,7 @@ const EducationItem = ({ educationItem }) => {
                 <Subsection
                     title={`${educationItem.universityName}, ${educationItem.city}`}
                 >
-                    <p>Licenciatura: {educationItem.degree}</p>
+                    <p>Título: {educationItem.degree}</p>
                     <p>Carrera: {educationItem.subject}</p>
                 </Subsection>
             </Info>
