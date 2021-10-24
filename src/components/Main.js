@@ -118,20 +118,20 @@ const Main = () => {
   }
 
   const handleDeleteEducation = (id) => {
-      setCv((prevState) => {
-          const newEducation = prevState.education.filter(
-              (educationItem) => educationItem.id !== id
-          )
-          return { ...prevState, education: [...newEducation] }
-      })
+    setCv((prevState) => {
+      const newEducation = prevState.education.filter(
+        (educationItem) => educationItem.id !== id
+      )
+      return { ...prevState, education: [...newEducation] }
+    })
   }
 
   const handleLoadExample = () => {
-      setCv(exampleCV)
+    setCv(exampleCV)
   }
 
   const handleReset = () => {
-      setCv(emptyCV)
+    setCv(emptyCV)
   }
 
   const componentRef = useRef()
@@ -140,39 +140,38 @@ const Main = () => {
   const handlePrint = useReactToPrint({ content: () => componentRef.current })
 
   return (
-      <MainWrapper>
-          <CVForm
-            cv={cv}
-            onChangePersonal={handleChangePersonal}
-            onChangeExperience={handleChangeExperience}
-            onAddExperience={handleAddExperience}
-            onDeleteExperience={handleDeleteExperience}
-            onChangeEducation={handleChangeEducation}
-            onAddEducation={handleAddEducation}
-            onDeleteEducation={handleDeleteEducation}
-            onPrint={handlePrint}
-            onLoadExample={handleLoadExample}
-            onReset={handleReset}
-        />
-        <CVPreview cv={cv} ref={componentRef} />
-      </MainWrapper>
+    <MainWrapper>
+      <CVForm
+        cv={cv}
+        onChangePersonal={handleChangePersonal}
+        onChangeExperience={handleChangeExperience}
+        onAddExperience={handleAddExperience}
+        onDeleteExperience={handleDeleteExperience}
+        onChangeEducation={handleChangeEducation}
+        onAddEducation={handleAddEducation}
+        onDeleteEducation={handleDeleteEducation}
+        onPrint={handlePrint}
+        onLoadExample={handleLoadExample}
+        onReset={handleReset}
+      />
+      <CVPreview cv={cv} ref={componentRef} />
+    </MainWrapper>
   )
 }
 
 export default Main
 
 const MainWrapper = styled.main`
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 4rem;
-    max-width: 1800px;
-    padding: 4rem 8rem;
-    margin: 0 auto;
-    margin-buttom: 4rem;
-
-    @media (max-width: 1600px) {
-        flex-direction: column;
-        align-items: center;
-    }
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1800px;
+  padding: 4rem 8rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  @media (max-width: 1600px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
