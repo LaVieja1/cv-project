@@ -49,5 +49,7 @@ const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
             />
             <Button text="Borrar" onClick={() => onDelete(id)}></Button>
         </>
-    )
-}
+    );
+};
+
+export default EducationItem;
