@@ -17,21 +17,21 @@ const EducationItem = ({ educationItem }) => {
                 </Subsection>
             </Info>
         </EducationItemWrapper>
-    );
-};
+    )
+}
 
 const EducationItemWrapper = styled.div`
     display: flex;
-`;
+`
 
 const Period = styled.div`
     width: 25%;
     font-weight: bold;
     margin-right: 2rem;
-`;
+`
 
 const Info = styled.div`
     width: 70%;
-`;
+`
 
-export default EducationItem;
+export default EducationItem
