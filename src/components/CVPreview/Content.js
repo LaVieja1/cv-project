@@ -5,36 +5,36 @@ import EducationItem from "./EducationItem";
 import Section from "../Utils/Section";
 
 const Content = ({ personalInfo, experience, education }) => {
-    const experienceItems = experience.map((ExperienceItem) => (
-        <ExperienceItem key={ExperienceItem.id} ExperienceItem={ExperienceItem} />
-    ));
+  const experienceItems = experience.map((experienceItem) => (
+    <ExperienceItem key={experienceItem.id} experienceItem={experienceItem} />
+  ));
 
-    const educationItems = education.map((EducationItem) => (
-        <EducationItem key={educationItem.id} educationItem={educationItem} />
-    ));
+  const educationItems = education.map((educationItem) => (
+    <EducationItem key={educationItem.id} educationItem={educationItem} />
+  ));
 
-    return (
-        <ContentWrapper>
-            <Section title="Description" contrastTitle>
-                <Description>{personalInfo.description}</Description>
-            </Section>
-            <Section title="Experience" direction="column" contrastTitle>
-                {experienceItems}
-            </Section>
-            <Section title="Education" direction="column" contrastTitle>
-                {educationItems}
-            </Section>
-        </ContentWrapper>
-    );
+  return (
+    <ContentWrapper>
+      <Section title="Description" contrastTitle>
+        <Description>{personalInfo.description}</Description>
+      </Section>
+      <Section title="Experience" direction="column" contrastTitle>
+        {experienceItems}
+      </Section>
+      <Section title="Education" direction="column" contrastTitle>
+        {educationItems}
+      </Section>
+    </ContentWrapper>
+  );
 };
 
 const ContentWrapper = styled.div`
-    padding: 2rem;
-    background-color: ${({ theme }) => theme.colors.light};
+  padding: 2rem;
+  background-color: ${({ theme }) => theme.colors.light};
 `;
 
 const Description = styled.div`
-    font-style: italic;
+  font-style: italic;
 `;
 
 export default Content;
