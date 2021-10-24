@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import emptyAvatar from "../../assets/emptyAvatar.png";
+import emptyAvatar from "../../assets/empty_avatar.png";
 
 const exampleCV = {
     personalInfo: {
